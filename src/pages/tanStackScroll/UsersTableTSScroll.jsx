@@ -1,4 +1,3 @@
-// VirtualizedMuiWindowScrollFixedPosition.jsx
 import React, { useRef, useState, useEffect } from "react";
 import {
   Paper,
@@ -93,8 +92,6 @@ export default function UsersTableTSScroll({
                   {columns.map((col) => (
                     <TableCell
                       key={col.field}
-                      component="div"
-                      role="cell"
                       style={{
                         width: col.width,
                         minWidth: col.width,
