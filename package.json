@@ -1,0 +1,42 @@
+{
+  "name": "edw-react-custom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@tanstack/react-virtual": "^3.13.12",
+    "jss": "^10.9.2",
+    "jss-preset-default": "^10.9.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.3.4",
+    "react-window": "^1.8.11",
+    "typeface-roboto": "^1.1.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@faker-js/faker": "^6.3.1",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "^1.3.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
+  }
+}
