@@ -10,6 +10,8 @@ import Plain from './pages/Plain';
 import ReactWindow from './pages/ReactWindow';
 import TanStack from './pages/TanStack';
 import TanStackScroll from './pages/TanStackScroll';
+import TanStackSafari from './pages/TanStackSafari';
+
 
 
 const theme = createTheme();
@@ -27,6 +29,7 @@ function App() {
                         <Button color="inherit" component={Link} to="/react-window">RW01</Button>
                         <Button color="inherit" component={Link} to="/tan-stack">TS01</Button>
                         <Button color="inherit" component={Link} to="/tan-stack-scroll">TS02</Button>
+                        <Button color="inherit" component={Link} to="/tan-stack-safari">TS03</Button>
                     </Toolbar>
                 </AppBar>
                 <Container maxWidth="lg">
@@ -45,6 +48,7 @@ function App() {
                             <Route path="/react-window" component={ReactWindow} />
                             <Route path="/tan-stack" component={TanStack} />
                             <Route path="/tan-stack-scroll" component={TanStackScroll} />
+                            <Route path="/tan-stack-safari" component={TanStackSafari} />
                         </Switch>
                     </div>
                 </Container>

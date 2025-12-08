@@ -3,11 +3,11 @@ import { useMediaQuery, useTheme } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { generateUsers } from '../utils/mockData'
 
-import UsersListTSScroll from './tanStackScroll/UsersListTSScroll'
-import UsersTableTSScroll from './tanStackScroll/UsersTableTSScroll'
+import UsersListTSSafari from './tanStackSafari/UsersListTSSafari'
+import UsersTableTSSafari from './tanStackSafari/UsersTableTSSafari'
 
 
-export default function TanStackScroll() {
+export default function TanStackSafari() {
     const theme = useTheme();
     const [users, setUsers] = React.useState([]);
     const count = 5000;
@@ -20,12 +20,12 @@ export default function TanStackScroll() {
 
     return (
         <div>
-            <Typography variant="h4" gutterBottom>TS02: TanStack Table with Window Scroll of {count} items</Typography>
+            <Typography variant="h4" gutterBottom>TS03: TanStack Table for SAFARI with Window Scroll of {count} items</Typography>
             {!isMobile &&
-                <UsersTableTSScroll users={users} />
+                <UsersTableTSSafari users={users} />
             }
             {isMobile && 
-                <UsersListTSScroll users={users} />
+                <UsersListTSSafari users={users} />
             }
         </div>
     );

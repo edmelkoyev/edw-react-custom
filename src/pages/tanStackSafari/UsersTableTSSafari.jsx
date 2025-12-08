@@ -15,7 +15,7 @@ Props:
   - columns: [{ field, label, width }]
   - rowHeight: px
 */
-export default function UsersTableTSScroll({
+export default function UsersTableTSSafari({
   users,
   rowHeight = 48
 }) {
