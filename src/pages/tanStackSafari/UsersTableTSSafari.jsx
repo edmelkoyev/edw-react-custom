@@ -56,18 +56,27 @@ export default function UsersTableWithWindowVirtualizer({
       {
         accessorKey: "id",
         header: "ID",
-        cell: info => <>
-          <input type="checkbox" id={info.getValue()} />
-          &#xa0;
-          <label for={info.getValue()}>{info.getValue()}</label>
-        </>,
-        size: "120px"
+        cell: info => <em>{info.getValue()}</em>,
+        size: "100px"
       },
       { accessorKey: "firstName", header: "First Name", size: "1fr" },
       { accessorKey: "lastName", header: "Last Name", size: "1fr"},
       { accessorKey: "age", header: "Age", size: "50px" },
       { accessorKey: "phone", header: "Phone", size: "2fr"},
-      { accessorKey: "location", header: "Location", size: "2fr",  }
+      {
+        accessorKey: "location",
+        header: "Location",
+        cell: info => {
+          const ident = info.row.original.id;
+          return (
+            <>
+              <input type="checkbox" id={ident} />
+              &#xa0;
+              <label for={ident}>{info.getValue()}</label>
+            </>
+          )
+        },
+        size: "2fr",  }
     ],
     []
   );
