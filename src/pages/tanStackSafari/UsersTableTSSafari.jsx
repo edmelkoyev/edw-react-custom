@@ -6,7 +6,6 @@ import {
   getCoreRowModel,
   flexRender
 } from "@tanstack/react-table";
-
 import { useWindowVirtualizer } from "@tanstack/react-virtual";
 
 /*
@@ -54,7 +53,16 @@ export default function UsersTableWithWindowVirtualizer({
   // ---------------------------
   const columns = React.useMemo(
     () => [
-      { accessorKey: "id", header: "ID", size: "100px" },
+      {
+        accessorKey: "id",
+        header: "ID",
+        cell: info => <>
+          <input type="checkbox" id={info.getValue()} />
+          &#xa0;
+          <label for={info.getValue()}>{info.getValue()}</label>
+        </>,
+        size: "120px"
+      },
       { accessorKey: "firstName", header: "First Name", size: "1fr" },
       { accessorKey: "lastName", header: "Last Name", size: "1fr"},
       { accessorKey: "age", header: "Age", size: "50px" },
@@ -166,7 +174,6 @@ export default function UsersTableWithWindowVirtualizer({
                 key={row.id}
                 role="row"
                 aria-rowindex={vi.index + 1}
-                tabIndex={0}
                 style={{
                   position: "absolute",
                   top: vi.start - tableOffset + rowHeight,
